@@ -3,10 +3,12 @@ package com.marthanieto.cafeapp.ui.screens
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -45,28 +47,32 @@ fun SplashScreen() {
                 .align(Alignment.BottomCenter)
                 .fillMaxWidth()
         )
-        Spacer(modifier = Modifier.height(16.dp))
-        Button(
-            onClick = {},
-            modifier = Modifier.align(Alignment.TopCenter),
-            shape = RoundedCornerShape(20.dp),
-            colors = ButtonDefaults.buttonColors(
-                containerColor = Brown,
-                contentColor = Color.White
-            )
-        ) {
-            Text(text = "Get Started", fontSize = 16.sp)
-        }
-        Text(
-            text = stringResource(id = R.string.welcome),
-            fontFamily = stashFont,
-            color = colorResource(R.color.white),
-            fontSize = 66.sp,
-            textAlign = TextAlign.Center,
-            lineHeight = 300.sp,
+        Column(
             modifier = Modifier
                 .align(Alignment.TopCenter)
-        )
+                .padding(top = 100.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Text(
+                text = stringResource(id = R.string.welcome),
+                fontFamily = stashFont,
+                color = colorResource(R.color.white),
+                fontSize = 66.sp,
+                textAlign = TextAlign.Center,
+                lineHeight = 70.sp
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+            Button(
+                onClick = {},
+                shape = RoundedCornerShape(20.dp),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Brown,
+                    contentColor = Color.White
+                )
+            ) {
+                Text(text = "Get Started", fontSize = 16.sp)
+            }
+        }
 
     }
 }
