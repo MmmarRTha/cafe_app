@@ -28,12 +28,13 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.marthanieto.cafeapp.R
 import com.marthanieto.cafeapp.ui.theme.Brown
 
 @Composable
 @Preview
-fun SplashScreen() {
+fun SplashScreen(navController: NavController) {
     val stashFont= FontFamily(Font(R.font.stash))
     Box(modifier = Modifier
         .fillMaxSize()
